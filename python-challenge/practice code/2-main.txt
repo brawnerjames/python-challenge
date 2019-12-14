@@ -1,0 +1,11 @@
+import os
+import csv
+
+csvpath = os.path.join('budget_data.csv')
+
+with open(csvpath, newline="") as csvfile:
+    budget_csv = csv.reader(csvfile, delimiter = ",")
+
+    # Assign first row to be header
+    budget_header = next(budget_csv)
+    
